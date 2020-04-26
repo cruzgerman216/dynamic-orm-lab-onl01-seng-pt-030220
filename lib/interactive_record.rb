@@ -23,4 +23,8 @@ class InteractiveRecord
     end
     column_names.compact
   end
+
+  def self.table_name_for_insert
+
+  end
 end
