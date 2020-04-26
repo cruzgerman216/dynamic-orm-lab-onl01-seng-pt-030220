@@ -55,6 +55,7 @@ class InteractiveRecord
     getvalue = hash[getkey]
 
     sql = "SELECT * FROM #{self.table_name} WHERE #{getkey} = #{getvalue}"
+    DB[:conn].execute(sql)
   end
 
 end
