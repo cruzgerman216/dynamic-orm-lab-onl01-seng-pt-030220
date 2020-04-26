@@ -52,7 +52,8 @@ class InteractiveRecord
   end
   def self.find_by(hash)
     getkey = hash.keys.first.to_s
-    getvalue = hash[getkey]
+    gethashkey = hash.keys.first.to_sym
+    getvalue = hash[gethashkey]
 
     sql = "SELECT * FROM #{self.table_name} WHERE #{getkey} = #{getvalue}"
     DB[:conn].execute(sql)
